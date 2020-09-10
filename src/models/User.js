@@ -1,6 +1,9 @@
 const mongoose=require('mongoose')
 
 const userSchema=new mongoose.Schema({
+    category:{
+        type:String
+    },
     problem:{
         type:String,
         trim:true

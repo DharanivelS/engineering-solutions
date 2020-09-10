@@ -82,6 +82,27 @@
                 <div class="col-sm-3 col-lg-7" style="background-color:white;">
                     <form method="POST" action="/submit">
                         <div class="form-group">
+                            <label for="category">Please select category:</label>
+                            <select class="form-control" id="category" name="category" required>
+                                <option value="">Select</option>
+                                <option value="Household device">Household device</option>
+                                <option value="Health monitoring & health related device">Health monitoring & health related device</option>
+                                <option value="Agriculture device">Agriculture device</option>
+                                <option value="Travelling device">Travelling device</option>
+                                <option value="Software related">Software related</option>
+                                <option value="Electronics related">Electronics related</option>
+                                <option value="Electrical related">Electrical related</option>
+                                <option value="Engineering device">Engineering device</option>
+                                <option value="Helping devices">Helping devices</option>
+                                <option value="Security devices">Security devices</option>
+                                <option value="Engineering projects">Engineering projects</option>
+                                <option value="Safety devices">Safety devices</option>
+                                <option value="vehicles related">vehicles related</option>
+                                <option value="Need to repair(Anything)">Need to repair(Anything)</option>
+                                <option value="Others">Others</option>
+                            </select>
+                          </div>
+                        <div class="form-group">
                             <label for="problem">Please mention your problem and the exact solution you're
                                 looking from our device:</label>
                             <textarea class="form-control input-lg" rows="5" id="problem" name="problem" required="required" style="resize: none;"></textarea>
