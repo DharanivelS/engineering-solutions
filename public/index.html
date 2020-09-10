@@ -4,103 +4,124 @@
         <title>Engineering solution</title>
         <link rel="stylesheet" href="./css/indexstyle.css">
         <script src="./js/jquery-3.5.1.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <header id="header">
-            <a href="#" class="logo">Engineering Solution</a>
-            <ul>
-                <li><a href="#home" id="h" class="active">Home</a></li>
-                <li><a href="#service" id="s">Service</a></li>
-                <li><a href="#form" id="f">Form</a></li>
-                <li><a href="#contact" id="c">Contact</a></li>
-               <!-- <li><a href="#portfolio" id="p">Portfolio</a></li>
-                <li><a href="#about" id="a">About</a></li>
-                <li><a href="#team" id="t">Team</a></li> --> 
-            </ul>
-            <div class="toggle" onclick="toggle()"></div>
-        </header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#">Engineering Solutions</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li id="h" class="active"><a href="#home" > Home</a></li>
+                  <li id="s"><a href="#service"> Service</a></li>
+                  <li id="f"><a href="#form"> Form</a></li>
+                  <li id="c"><a href="#contact"> Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         <!--<section>
             <video src="./video/production ID-4708370.mp4" autoplay="" muted="" loop=""></video>
         </section>-->
-        <section id="home">
-            <div>
-                <h2>ENGINEERING SOLUTION</h2>
+        <div class="container">
+        <div class="row" id="home">
+            <div class="col-sm-3 col-lg-7" style="background-color:white;">
+                <h1 style="font-size:48px;">ENGINEERING SOLUTION</h1>
                 <p>We are trained professionals here to help people with their daily problems by inventing
                    gadgets,devices,instruments and solutions to make their work easy. In short we're here to
                    find solutions to the problems you've,by finding new inventions. Fill the below form to 
                    submit your request regarding any device you need to make your work easy.
                 </p>
             </div>
-            <img src="./img/pexels-ivan-bertolazzi-2681319.jpg">
-        </section>
-        <section id="service">
-            <div>
-                <h2>Our service</h2>
-                <p>
-                    <ol>
-                        <li>Household device</li>
-                        <li>Health monitoring & health related device</li>
-                        <li>Agriculture device</li>
-                        <li>Travelling device</li>
-                        <li>Software related</li>
-                        <li>Engineering device</li>
-                        <li>Electronics related</li>
-                        <li>Electrical related</li>
-                        <li>Helping devices</li>
-                        <li>Security devices</li>
-                        <li>Engineering projects</li>
-                        <li>Safety devices</li>
-                        <li>vehicles related</li>
-                        <li>Need to repair(Anything)</li>
-                        <li>Others</li>
-                    </ol>
-                </p>
+            <div class="col-sm-9 col-lg-5" style="background-color:white;"><br>
+                <img src="./img/pexels-pixabay-356043.jpg" class="img-responsive" alt="think about things differently" width="460">
             </div>
-        </section>
-        <section id="form">
-            <div>
-                <h2>Form</h2>
-                <br><br>
-                <div class="contactform">
-                <form method="POST" action="/submit">
-                        <div class="inputbox">
+          </div>
+        </div>
+        <br>
+        <div class="container">
+        <div class="panel panel-default"  id="service">
+            <div class="panel-heading" style="font-size: 28px;">Our service</div>
+            <div class="panel-body">
+                <ol>
+                    <li>Household device</li>
+                    <li>Health monitoring & health related device</li>
+                    <li>Agriculture device</li>
+                    <li>Travelling device</li>
+                    <li>Software related</li>
+                    <li>Engineering device</li>
+                    <li>Electronics related</li>
+                    <li>Electrical related</li>
+                    <li>Helping devices</li>
+                    <li>Security devices</li>
+                    <li>Engineering projects</li>
+                    <li>Safety devices</li>
+                    <li>vehicles related</li>
+                    <li>Need to repair(Anything)</li>
+                    <li>Others</li>
+                </ol>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+            <div class="page-header" id="form">
+              <h1>Form</h1>      
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-lg-7" style="background-color:white;">
+                    <form method="POST" action="/submit">
+                        <div class="form-group">
                             <label for="problem">Please mention your problem and the exact solution you're
-                                looking from our device
-                            </label><br>
-                            <textarea required="required" name="problem" id="problem"></textarea>
+                                looking from our device:</label>
+                            <textarea class="form-control input-lg" rows="5" id="problem" name="problem" required="required" style="resize: none;"></textarea>
                         </div>
-                        <br><br>
-                        <div class="inputbox">
+                        <div class="form-group">
                             <label for="purchase">Would you like to purchase a device or gadget which can 
-                                help you with your problem you've mentioned above
-                            </label><br><br>
-                            <select id="purchase" name="purchase">
+                                help you with your problem you've mentioned above:</label>
+                            <select class="form-control" id="purchase" name="purchase">
                                 <option value="No" selected>No</option>
                                 <option value="Yes">Yes</option>
-                              </select>
-                        </div>
-                        <br><br>
-                        <div class="inputbox">
+                            </select>
+                          </div>
+                          <div class="form-group">
                             <label for="contact">Contact details(To call you when the device/
-                                gadget is ready)</label><br>
-                            <input type="text" id="contact" name="contact" required="required" placeholder="phone/email">
-                        </div>
-                        <br><br>
-                        <div class="inputbox">
-                            <input type="submit" >
-                        </div>
-                </form>
-            </div>
-            </div>
-            <img src="./img/pexels-pixabay-355952.jpg">
-        </section>
-        <section id="contact">
-            <div>
-                <h2>Contact us</h2>
-                <p>THE ENGINEERING SOLUTIONS, <br><br>Saidapet-Chennai,
-                   <br><br>email : sadik788basha@gmail.com, <br><br>phone : 8124289911.</p>
-            </div>
-        </section>
+                                gadget is ready):</label>
+                            <input type="text" class="form-control" id="contact" name="contact" required="required" placeholder="phone/email">
+                          </div>
+                          <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+                <div class="col-sm-9 col-lg-5" style="background-color:white;"><br>
+                    <img src="./img/pexels-pixabay-355952.jpg" class="img-responsive" alt="think about things differently" width="460">
+                </div>
+              </div> 
+        </div>
+        <div class="container-fluid" style="margin-top: 100px;margin-left:0;margin-right:0;margin-bottom:0;padding: 0;">
+            <footer id="contact">
+                <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h4 style="text-decoration: underline;">Contact us</h4>
+                        <p>THE ENGINEERING SOLUTIONS, 
+                        <br>Saidapet-Chennai,
+                        <br>email : sadik788basha@gmail.com, 
+                        <br>phone : 8124289911/8056482153</p>
+                      </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </body>
     <script src="./js/indexscript.js"></script>
 </html>
