@@ -9,7 +9,7 @@ route.post('/submit',async function(rq,rs){
     try{
         const user=new User(rq.body)
         await user.save()
-        rs.send('<h1>your idea is submitted successfully</h1>')
+        rs.send('<h1>your idea submitted successfully</h1>')
     }catch(e){
         rs.status(500).send(e)
     }
